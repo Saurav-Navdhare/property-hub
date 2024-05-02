@@ -10,6 +10,8 @@ import messageRoute from "./routes/message.route.js";
 
 const app = express();
 
+// console.log(process.env.CLIENT_URL)
+
 app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
